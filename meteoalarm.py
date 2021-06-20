@@ -29,7 +29,7 @@
 #   4       RED The weather is very dangerous. Exceptionally intense meteorological phenomena have been forecast. Major damage and accidents are likely, in many cases with threat to life and limb, over a wide area.
 
 # ----------------------configuration----------------------------- #
-rss_url = 'http://meteoalarm.eu/documents/rss/pl/PL1465.rss'       # put here valid RSS url for your region from meteoalarm.eu
+rss_url = 'http://meteoalarm.eu/documents/rss/pl/PL1465.rss'       # put here valid RSS url for your region from meteoalarm.eu http://www.meteoalarm.eu/en_UK/0/0/EU-Europe.html
 
 from locale import pl_awt as def_awt
 from locale import pl_lvl as def_lvl
