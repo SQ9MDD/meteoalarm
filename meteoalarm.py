@@ -31,20 +31,23 @@
 # ----------------------configuration----------------------------- #
 rss_url = 'http://meteoalarm.eu/documents/rss/pl/PL1465.rss'       # put here valid RSS url for your region from meteoalarm.eu
 
+from locale import pl_awt as def_awt
+from locale import pl_lvl as def_lvl
+# ----------------------configuration----------------------------- #
+
 from urllib.request import urlopen
-from locale import en_awt, en_lvl
 
 def set_label_for_alert(alert = 0):
     if(alert == 0):
         return()
     else:
-        return(en_lvl[alert])
+        return(def_lvl[alert])
 
 def set_label_for_awerness(awt = 0):
     if(awt == 0):
         return()
     else:
-        return(en_awt[awt])
+        return(def_awt[awt])
     
 def get_data_and_extract_alerts():
     try:

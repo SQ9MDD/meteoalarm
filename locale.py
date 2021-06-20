@@ -22,3 +22,43 @@ en_lvl = ["No valid alerts",
         "WEATHER YELLOW ALERT",
         "WEATHER ORANGE ALERT",
         "WEATHER RED ALERT"]
+
+es_awt = ["",
+        "Vientos",
+        "Nevadas",
+        "Tormentas",
+        "Nieblas",
+        "Temperaturas maximas",
+        "Temperaturas minimas",
+        "Fenomenos costeros",
+        "Riesgo de incendio",
+        "Avalanches warning",
+        "Lluvias",
+        "Riesgo de inundacion",
+        "Riesgo desborde"]
+
+es_lvl = ["No valid alerts",
+        "Nivel Verde",
+        "Nivel Amarillo",
+        "Nivel Naranja",
+        "Nivel Rojo"]       
+
+pl_awt = ["",
+        "silny wiatr",
+        "silne opady sniegu",
+        "zagrozenie burzowe",
+        "silna mgla",
+        "bardzo wysoka temperatura",
+        "bardzo niska temperatura",
+        "wysokie fale",
+        "zagrozenie pozarami lasow",
+        "zagrozenie lawinowe",
+        "silny deszcz",
+        "zagrozenie powodziowe",
+        "silne deszcze i podtopienia"]
+
+pl_lvl = ["brak poprawnych danych ",
+        "BRAK ALARMOW POGODOWYCH",
+        "ZOLTY ALARM POGODOWY",
+        "POMARANCZOWY ALARM POGODOWY",
+        "CZERWONY ALARM POGODOWY"]         
