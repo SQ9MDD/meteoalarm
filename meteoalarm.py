@@ -73,4 +73,3 @@ try:
     print(status_frame)
 except:
     pass
-
