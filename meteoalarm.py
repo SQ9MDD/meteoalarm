@@ -64,15 +64,13 @@ def get_data_and_extract_alerts():
         return_data = [0,0]
         return()
 
-#debugging
-curr_alert_data = get_data_and_extract_alerts()
-#print("Awerness type: " + curr_alert_data[0])
-#print("Awerness levl: " + curr_alert_data[1])
-if(curr_alert_data[1] > 1):
-    status_frame = ">" + set_label_for_alert(curr_alert_data[1]) + ' ' + set_label_for_awerness(curr_alert_data[0])
-else:
-    status_frame = ">" + set_label_for_alert(curr_alert_data[1])
+try:
+    curr_alert_data = get_data_and_extract_alerts()
+    if(curr_alert_data[1] > 1):
+        status_frame = ">" + set_label_for_alert(curr_alert_data[1]) + ' ' + set_label_for_awerness(curr_alert_data[0])
+    else:
+        status_frame = ">" + set_label_for_alert(curr_alert_data[1])
+    print(status_frame)
+except:
+    pass
 
-print(status_frame)
-#print(set_label_for_alert(curr_alert_data[1]))
-#print(set_label_for_awerness(curr_alert_data[0]))
