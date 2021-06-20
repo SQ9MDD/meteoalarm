@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Copyright (c) 2021 SQ9MDD Rysiek Labus
 # 
 # This software is released under the MIT License.
