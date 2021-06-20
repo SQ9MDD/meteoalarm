@@ -17,8 +17,8 @@ en_awt = ["",
         "Flood warning",
         "Rain-Flood warning"]
 
-en_lvl = ["WHITE",
-        "GREEN",
+en_lvl = ["No valid alerts",
+        "NO WEATHER ALERTS",
         "YELLOW ALERT",
         "ORANGE ALERT",
         "RED ALERT"]
