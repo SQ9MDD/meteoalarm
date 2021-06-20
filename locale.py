@@ -19,6 +19,6 @@ en_awt = ["",
 
 en_lvl = ["No valid alerts",
         "NO WEATHER ALERTS",
-        "YELLOW ALERT",
-        "ORANGE ALERT",
-        "RED ALERT"]
+        "WEATHER YELLOW ALERT",
+        "WEATHER ORANGE ALERT",
+        "WEATHER RED ALERT"]

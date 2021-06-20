@@ -68,7 +68,7 @@ curr_alert_data = get_data_and_extract_alerts()
 if(curr_alert_data[1] > 1):
     status_frame = ">" + set_label_for_alert(curr_alert_data[1]) + ' ' + set_label_for_awerness(curr_alert_data[0])
 else:
-    status_frame = ">"+ set_label_for_awerness(curr_alert_data[0])
+    status_frame = ">" + set_label_for_alert(curr_alert_data[1])
 
 print(status_frame)
 #print(set_label_for_alert(curr_alert_data[1]))
