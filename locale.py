@@ -23,6 +23,7 @@ en_lvl = ["No valid alerts",
         "WEATHER ORANGE ALERT",
         "WEATHER RED ALERT"]
 
+# es written by EA8CXN Cesar
 es_awt = ["",
         "Vientos",
         "Nevadas",
@@ -43,6 +44,7 @@ es_lvl = ["No valid alerts",
         "Nivel Naranja",
         "Nivel Rojo"]       
 
+# pl written by SQ9MDD Rysiek
 pl_awt = ["",
         "silny wiatr",
         "silne opady sniegu",
