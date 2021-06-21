@@ -19,9 +19,9 @@ en_awt = ["",
 
 en_lvl = ["No valid alerts",
         "NO WEATHER ALERTS",
-        "WEATHER YELLOW ALERT",
-        "WEATHER ORANGE ALERT",
-        "WEATHER RED ALERT"]
+        "YELLOW ALERT",
+        "ORANGE ALERT",
+        "RED ALERT"]
 
 # es written by EA8CXN Cesar
 es_awt = ["",
@@ -42,7 +42,7 @@ es_lvl = ["No valid alerts",
         "Nivel Verde",
         "Nivel Amarillo",
         "Nivel Naranja",
-        "Nivel Rojo"]       
+        "Nivel Rojo"]
 
 # pl written by SQ9MDD Rysiek
 pl_awt = ["",
@@ -50,7 +50,7 @@ pl_awt = ["",
         "silne opady sniegu",
         "zagrozenie burzowe",
         "silna mgla",
-        "wysoka temperatura",
+        "upal",
         "silny mroz",
         "wysokie fale",
         "zagrozenie pozarami lasow",
@@ -61,6 +61,6 @@ pl_awt = ["",
 
 pl_lvl = ["brak poprawnych danych ",
         "BRAK ALARMOW POGODOWYCH",
-        "ZOLTY ALARM POGODOWY",
-        "POMARANCZOWY ALARM POGODOWY",
-        "CZERWONY ALARM POGODOWY"]         
+        "ZOLTY ALARM",
+        "POMARANCZOWY ALARM",
+        "CZERWONY ALARM"]
