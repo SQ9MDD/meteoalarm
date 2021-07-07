@@ -29,7 +29,7 @@
 #   4       RED The weather is very dangerous. Exceptionally intense meteorological phenomena have been forecast. Major damage and accidents are likely, in many cases with threat to life and limb, over a wide area.
 
 # CHANGELOG
-# 20210707 - changing feed source according to new meteoalarm interface (https://feeds.meteoalarm.org/)
+# 20210707 - changing feed source according to new meteoalarm interface (https://feeds.meteoalarm.org/) tnx for info Cesar ;-)
 
 # ----------------------configuration----------------------------- #
 rss_url = 'https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-rss-poland'         # put here valid RSS url for your country from meteoalarm.eu
