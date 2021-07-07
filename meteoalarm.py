@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
 # Copyright (c) 2021 SQ9MDD Rysiek Labus
-# 
+#
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
 # DATA SOURCE meteoalarm.eu
 # look for metegram and find" img with alt="awt:6 level:1"
-#   Awarness Type: 
+#   Awarness Type:
 #   1       wind
 #   2       snow / ice
 #   3       thunderstorm
@@ -28,8 +28,12 @@
 #   3       ORANGE The weather is dangerous. Unusual meteorological phenomena have been forecast. Damage and casualties are likely to happen
 #   4       RED The weather is very dangerous. Exceptionally intense meteorological phenomena have been forecast. Major damage and accidents are likely, in many cases with threat to life and limb, over a wide area.
 
+# CHANGELOG
+# 20210707 - changing feed source according to new meteoalarm interface (https://feeds.meteoalarm.org/)
+
 # ----------------------configuration----------------------------- #
-rss_url = 'http://meteoalarm.eu/documents/rss/pl/PL1465.rss'       # put here valid RSS url for your region from meteoalarm.eu http://www.meteoalarm.eu/en_UK/0/0/EU-Europe.html
+rss_url = 'https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-rss-poland'       # put here valid RSS url for your region from meteoalarm.eu http://www.meteoalarm.eu/en_UK/0/0/EU-Europe.html
+rss_county = 'Mazowieckie Province Warszawa County'
 
 from locale import pl_awt as def_awt
 from locale import pl_lvl as def_lvl
@@ -48,13 +52,15 @@ def set_label_for_awerness(awt = 0):
         return()
     else:
         return(def_awt[awt])
-    
-def get_data_and_extract_alerts():
+
+def get_data_and_extract_alerts(rss_url,rss_county):
     try:
         response = urlopen(rss_url)
-        text = response.read().decode('utf-8') 
-        awt_pos = text.find("awt:") + 4
-        lvl_pos = text.find("level:") + 6
+        text = response.read().decode('utf-8')
+        county_code_pos = text.find(rss_county)
+        #print(county_code_pos)
+        awt_pos = text.find("awt:",county_code_pos) + 4
+        lvl_pos = text.find("level:",county_code_pos) + 6
         #print(text)
         awt = text[awt_pos:(awt_pos + 1)]        # AWT
         lvl = text[lvl_pos:(lvl_pos + 1)]        # LVL
@@ -65,7 +71,7 @@ def get_data_and_extract_alerts():
         return()
 
 try:
-    curr_alert_data = get_data_and_extract_alerts()
+    curr_alert_data = get_data_and_extract_alerts(rss_url,rss_county)
     if(curr_alert_data[1] > 1):
         status_frame = ">" + set_label_for_alert(curr_alert_data[1]) + ' ' + set_label_for_awerness(curr_alert_data[0])
     else:
