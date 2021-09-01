@@ -56,8 +56,8 @@ def get_data_and_extract_alerts():
         awt_pos = text.find("awt:") + 4
         lvl_pos = text.find("level:") + 6
         #print(text)
-        awt = text[awt_pos:(awt_pos + 1)]        # AWT
-        lvl = text[lvl_pos:(lvl_pos + 1)]        # LVL
+        awt = text[awt_pos:(awt_pos + 2)]        # AWT
+        lvl = text[lvl_pos:(lvl_pos + 2)]        # LVL
         return_data = [int(awt),int(lvl)]        # awt,lvl
         return(return_data)
     except:
