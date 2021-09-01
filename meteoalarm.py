@@ -62,8 +62,8 @@ def get_data_and_extract_alerts(rss_url,rss_county):
         awt_pos = text.find("awt:",county_code_pos) + 4
         lvl_pos = text.find("level:",county_code_pos) + 6
 
-        awt = text[awt_pos:(awt_pos + 1)]        # AWT
-        lvl = text[lvl_pos:(lvl_pos + 1)]        # LVL
+        awt = text[awt_pos:(awt_pos + 2)]        # AWT
+        lvl = text[lvl_pos:(lvl_pos + 2)]        # LVL
         return_data = [int(awt),int(lvl)]        # awt,lvl
         return(return_data)
     except:
