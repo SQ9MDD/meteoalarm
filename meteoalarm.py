@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 
 # Copyright (c) 2021 SQ9MDD Rysiek Labus
 #
@@ -30,7 +30,7 @@
 
 # CHANGELOG
 # 20210707 - changing feed source according to new meteoalarm interface (https://feeds.meteoalarm.org/) tnx for info Cesar ;-)
-
+# 20220118 - deploy fixes from SQ7LQU
 # ----------------------configuration----------------------------- #
 rss_url = 'https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-rss-poland'         # put here valid RSS url for your country from meteoalarm.eu
 rss_county = 'Mazowieckie Province Warszawa County'                                 # region or country name exactly as it is in RSS
@@ -39,7 +39,7 @@ from locale import pl_awt as def_awt
 from locale import pl_lvl as def_lvl
 # ----------------------configuration----------------------------- #
 
-from urllib.request import urlopen
+from urllib import urlopen
 
 def set_label_for_alert(alert = 0):
     if(alert == 0):
@@ -57,13 +57,11 @@ def get_data_and_extract_alerts(rss_url,rss_county):
     try:
         response = urlopen(rss_url)
         text = response.read().decode('utf-8')
-
         county_code_pos = text.find(rss_county)
         awt_pos = text.find("awt:",county_code_pos) + 4
         lvl_pos = text.find("level:",county_code_pos) + 6
-
         awt = text[awt_pos:(awt_pos + 2)]        # AWT
-        lvl = text[lvl_pos:(lvl_pos + 2)]        # LVL
+        lvl = text[lvl_pos:(lvl_pos + 1)]        # LVL
         return_data = [int(awt),int(lvl)]        # awt,lvl
         return(return_data)
     except:
