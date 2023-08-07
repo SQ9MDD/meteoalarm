@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 # Copyright (c) 2021 SQ9MDD Rysiek Labus
 #
@@ -31,15 +31,17 @@
 # CHANGELOG
 # 20210707 - changing feed source according to new meteoalarm interface (https://feeds.meteoalarm.org/) tnx for info Cesar ;-)
 # 20220118 - deploy fixes from SQ7LQU
+# 20230807 - migrating to python3
 # ----------------------configuration----------------------------- #
 rss_url = 'https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-rss-poland'         # put here valid RSS url for your country from meteoalarm.eu
-rss_county = 'Mazowieckie Province Warszawa County'                                 # region or country name exactly as it is in RSS
+#rss_county = 'Mazowieckie Province Warszawa County'                                 # region or country name exactly as it is in RSS
+rss_county = 'Zachodniopomorskie Province Świnoujście County'
 
 from locale import pl_awt as def_awt
 from locale import pl_lvl as def_lvl
 # ----------------------configuration----------------------------- #
 
-from urllib import urlopen
+from urllib.request import urlopen
 
 def set_label_for_alert(alert = 0):
     if(alert == 0):
